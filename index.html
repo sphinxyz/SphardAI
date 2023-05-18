@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <title></title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SphardAi</title>
   </head>
   <body>
+    {% if output %}
     <h1>Output:</h1>
-    <p>{{output}}</p>
+    <p>{{ output }}</p>
+    {% endif %}
+
+    <form action="/" method="POST">
+      <input type="text" name="command" placeholder="Masukkan perintah" />
+      <input type="submit" value="Kirim" />
+    </form>
   </body>
 </html>
