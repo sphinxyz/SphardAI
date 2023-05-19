@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2"
+  },
+  "name": "sphardai",
+  "description": "SphardAI is an AI created using unofficial GB token for secure authentication. It provides a strong and secure solution to implement AI-based solutions for various applications.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./static/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sphinxyz/SphardAI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sphinxyz/SphardAI/issues"
+  },
+  "homepage": "https://github.com/sphinxyz/SphardAI#readme"
+}
