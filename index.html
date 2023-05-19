@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>SphardAi</title>
+    <title>leak</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="{{ url_for('static', filename='output.css') }}"
+      type="text/css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    {% if output %}
-    <h1>Output:</h1>
-    <p>{{ output }}</p>
-    {% endif %}
+    <div class="text-center">
+      <h1 class="text-2xl text-cyan-500">Coba Tailwindcss</h1>
 
-    <form action="/" method="POST">
-      <input type="text" name="command" placeholder="Masukkan perintah" />
-      <input type="submit" value="Kirim" />
-    </form>
+      {% if output %}
+      <h1>Output:</h1>
+      <p>{{ output }}</p>
+      {% endif %}
+
+      <form action="/" method="POST">
+        <input type="text" name="command" placeholder="Masukkan perintah" />
+        <input type="submit" value="Kirim" />
+      </form>
+    </div>
   </body>
 </html>
