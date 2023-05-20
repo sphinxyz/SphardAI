@@ -1,3 +1,5 @@
+# SphardAI
+
 SphardAI is an AI created using unofficial GB token for secure authentication. It provides a strong and secure solution to implement AI-based solutions for various applications.
 
 ### Installation
@@ -18,6 +20,36 @@ npm run dev
 # brd.py
 python3 brd.py
 ```
+
+rename `.env-example` file to `.env` file and put your token.
+
+### Costumize service URL
+
+You can use another google translate domain for translation. If multiple URLs are provided it then randomly chooses a domain.
+
+```python
+translator = Translator(service_urls=[
+      'translate.google.com',
+      'translate.google.co.kr',
+    ])
+```
+
+### Select your Language
+
+input and output, you can change as you like.
+
+```python
+def index():
+    output = ''
+    if request.method == 'POST':
+        command = request.form['command']
+        translated_command = translator.translate(command, src='id', dest='en').text
+        translated_output = bot.ask(translated_command)['content']
+        output = translator.translate(translated_output, src='en', dest='id').text
+    return render_template('index.html', output=output)
+```
+
+SCC (Sloc, Cloc, and Code):
 
 ```bash
 ───────────────────────────────────────────────────────────────────────────────
@@ -42,3 +74,7 @@ Estimated People Required (organic) 1.09
 Processed 79776 bytes, 0.080 megabytes (SI)
 ───────────────────────────────────────────────────────────────────────────────
 ```
+
+---
+
+[MIT License](./LICENSE)
